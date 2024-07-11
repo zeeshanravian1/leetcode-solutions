@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "leetcode-solutions"
+version = "0.1.0"
+description = ""
+authors = ["zeeshanravian1 <zeeshanravian1@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.7.1"
+pytest = "^8.2.2"
+ipykernel = "^6.29.5"
+jupyter = "^1.0.0"
+radon = "^6.0.1"
+python-lsp-server = {extras = ["all"], version = "^1.11.0"}
+black = "^24.4.2"
+pyupgrade = "^3.16.0"
+ruff = "^0.5.1"
+skjold = "^0.6.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 79
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
+
+[tool.skjold]
+sources = ["github", "pyup", "gemnasium"]  # Sources to check against.
+report_only = false                        # Exit with non-zero exit code on findings.
+report_format = 'cli'                      # Output findings as `json`. Default is 'cli'.
+cache_dir = '.skjold_cache'                # Cache location (default: `~/.skjold/cache`).
+cache_expires = 86400                      # Cache max. age.
+ignore_file = '.skjoldignore'              # Ignorefile location (default `.skjoldignore`).
+verbose = true                             # Be verbose.
