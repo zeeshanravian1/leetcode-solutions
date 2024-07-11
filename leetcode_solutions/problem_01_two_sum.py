@@ -1,6 +1,9 @@
 """
 # 1. Two Sum
 
+URL:
+    - https://leetcode.com/problems/two-sum
+
 ## Problem Statement
 
 Given an array of integers `nums` and an integer `target`, return indices of
@@ -38,7 +41,7 @@ You can return the answer in any order.
 - $-10^9 <= target <= 10^9$
 - **Only one valid answer exists.**
 
-Follow-up: Can you come up with an algorithm that is less than O(n2) time
+Follow-up: Can you come up with an algorithm that is less than 𝑂(𝑛2) time
 complexity?
 
 ## **Solution:**
@@ -54,13 +57,13 @@ store and quickly look up the indices of previously seen numbers.
 - **Initialize a Hash Map (Dictionary):**
 
     Create an empty dictionary called
-seen to store numbers and their corresponding indices as you iterate through
-the list.
+    seen to store numbers and their corresponding indices as you iterate
+    through the list.
 
 - **Iterate through the List:**
 
     For each number in the list, calculate its
-complement with respect to the target (i.e., target - num).
+    complement with respect to the target (i.e., target - num).
 
 - **Check for Complement:**
     - If the complement is already in the dictionary, it means a pair of
@@ -73,8 +76,8 @@ complement with respect to the target (i.e., target - num).
 - **Return Result:**
 
     If no such pair is found by the end of the iteration,
-return an empty list (though the problem guarantees exactly one solution, so
-this return is more of a safeguard).
+    return an empty list (though the problem guarantees exactly one solution,
+    so this return is more of a safeguard).
 
 #### Complexity
 - **Time complexity:**
@@ -89,6 +92,7 @@ this return is more of a safeguard).
     The space complexity is **𝑂(𝑛)** because, in the worst case, we might store
     all **𝑛** elements in the dictionary if no two elements sum up to the
     target until the end.
+
 """
 
 
@@ -106,7 +110,6 @@ class Solution:
     Methods:
         - `twoSum(nums: list[int], target: int) -> list[int]:` Finds two
         indices in `nums` that add up to `target`.
-        - `run_tests() -> None:` Runs test cases to validate the solution.
 
     """
 

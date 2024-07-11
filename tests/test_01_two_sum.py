@@ -2,7 +2,7 @@
 01. Two Sum Test Module
 
 Description:
-    - This module contains test cases for the twoSum problem.
+    - This module contains test cases for the two sum problem.
 
 """
 
@@ -27,6 +27,7 @@ class TestTwoSum:
 
     Methods:
         - `run_tests() -> None:` Runs test cases to validate the solution.
+
     """
 
     test_cases: list[dict[str, Any]] = [
@@ -62,6 +63,7 @@ class TestTwoSum:
         Asserts:
             - Asserts that the output from twoSum method matches the expected
             output.
+
         """
         solution = Solution()
         assert (
