@@ -78,8 +78,11 @@ repos:
     - id: detect-private-key
 
     # verifies that test files are named correctly. Files should be named
-    # `test_*.py` or `*_test.py`.
+    # --pytest (the default): ensure tests match .*_test\.py
+    # --pytest-test-first: ensure tests match test_.*\.py
+    # --django / --unittest: ensure tests match test.*\.py
     - id: name-tests-test
+      args: ['--pytest-test-first']
 
   # A tool (and pre-commit hook) to automatically upgrade syntax for newer versions of language.
   - repo: https://github.com/asottile/pyupgrade
@@ -121,6 +124,7 @@ repos:
     rev: v0.6.2
     hooks:
     - id: skjold
+      # verbose: true
 
   # Analyzes Python code complexity using Radon, ensuring that the code meets a specified
   # complexity threshold before allowing commits, promoting maintainable and readable code.
