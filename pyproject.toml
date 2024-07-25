@@ -10,14 +10,14 @@ python = "^3.12"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^3.7.1"
-pytest = "^8.2.2"
+pytest = "^8.3.1"
 ipykernel = "^6.29.5"
 jupyter = "^1.0.0"
 radon = "^6.0.1"
 python-lsp-server = {extras = ["all"], version = "^1.11.0"}
 black = "^24.4.2"
 pyupgrade = "^3.16.0"
-ruff = "^0.5.1"
+ruff = "^0.5.4"
 skjold = "^0.6.2"
 
 [build-system]
